@@ -63,7 +63,3 @@ window.addEventListener('resize', animateTextItems);
 
 // Run the animation on page load
 animateTextItems();
-
-while(animaceRealizace.classlist.contains("show")) {
-animaceRealizace.classlist.remove("animace-realizace")
-}
