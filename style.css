@@ -229,7 +229,7 @@ p.text {
 /* CTVRTA SEKCE */
 
 .ctyri {
-  height: 115vh;
+  height: 110vh;
   position: relative; /* Add position relative to the container */
 
   display: flex;
@@ -371,6 +371,73 @@ p.text {
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (width >=2160px) {
+  h2.nadpis {
+    font-size: 4.5rem;
+    width: 40vw;
+  }
+
+  p.text {
+    font-size: 2.418rem;
+    line-height: 46px;
+  }
+
+  .text-up {
+    font-size: 1.816rem;
+  }
+
+  .text-down {
+    font-size: 2.416rem;
+  }
+
+  .container-img img {
+    height: 60vh;
+    transform: translateY(-15vh);
+  }
+
+  .container-img img:nth-of-type(2) {
+    transform: translateY(calc(50% + 10vh)) scaleY(-1);
+  }
+
+  .tri .container-text {
+    margin-left: -20vw;
+  }
+
+  .text-item {
+    width: 26vw;
+  }
+
+  .text-item .text {
+    font-size: 1.718rem;
+    line-height: 33px;
+  }
+
+  .text-item .nadpis h3 {
+    font-size: 2.618rem;
+    line-height: 50px;
+  }
+
+  .video img {
+    transform: scale(1.4);
+  }
+
+  .video img:hover {
+    transform: scale(1.6);
+  }
+
+  .footer-item a {
+    font-size: 2.5rem;
+  }
+
+  .footer-down {
+    font-size: 1.716rem;
+  }
+
+  .footer-down a {
+    margin-left: 7px;
+  }
+}
 
 @media screen and (width <= 1440px) {
   .dva .container-text-prvni {
@@ -709,6 +776,10 @@ p.text {
   .container-img img {
     height: auto;
     width: 100vw;
+  }
+
+  .realizace {
+    height: 12vh;
   }
 
   .realizace.active .arrowRight {
