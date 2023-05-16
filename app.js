@@ -53,6 +53,10 @@ function animateTextItems() {
   });
 }
 
+if(animaceRealizace.classlist.contains("show")) {
+animaceRealizace.classlist.remove("animace-realizace")
+}
+
 // Trigger the animation on page load
 window.addEventListener('DOMContentLoaded', animateTextItems);
 
