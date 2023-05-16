@@ -116,6 +116,10 @@ p.text {
   transition: var(--transition);
 }
 
+.realizace.active .arrowRight {
+  width: 7vw;
+}
+
 .realizace-text {
   color: var(--clr-white);
   text-transform: uppercase;
