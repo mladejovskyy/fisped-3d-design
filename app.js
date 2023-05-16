@@ -11,3 +11,32 @@ realizace.addEventListener('mouseout', () => {
   realizaceTextUp.style.color = ''; // Reset the color to its default value
   arrowRight.style.width = ''
 });
+
+
+// Animation
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= windowHeight
+  );
+}
+
+function animateTextItems() {
+  var textItems = document.querySelectorAll('.text-item');
+
+  textItems.forEach(function(item) {
+    if (isElementInViewport(item)) {
+      item.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateTextItems);
+window.addEventListener('resize', animateTextItems);
+
+// Run the animation on page load
+animateTextItems();

@@ -68,6 +68,10 @@ img {
   right: 0;
 }
 
+.container-mk3-sm-show {
+  display: none;
+}
+
 h2.nadpis {
   font-size: 2.875rem;
   font-weight: 400;
@@ -84,7 +88,7 @@ p.text {
   margin-bottom: 2.625rem;
 }
 
-.dva .container-text {
+.dva .container-text-prvni {
   margin: 4.875rem 0 0 9.875rem;
 }
 
@@ -196,6 +200,19 @@ p.text {
   margin: 50px 25px;
 }
 
+/* Animace */
+
+.text-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.text-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* CTVRTA SEKCE */
 
 .ctyri {
@@ -300,7 +317,7 @@ p.text {
 /* MEDIA QUERIES */
 
 @media screen and (width <= 1440px) {
-  .dva .container-text {
+  .dva .container-text-prvni {
     margin: 4.875rem 0 0 5rem;
   }
 
@@ -396,7 +413,7 @@ p.text {
 }
 
 @media screen and (width <= 768px) {
-  .dva .container-text {
+  .dva .container-text-prvni {
     margin: 4.875rem 0 0 3rem;
   }
 
@@ -447,6 +464,45 @@ p.text {
     flex-direction: column;
   }
 
+  .dva .container-text-prvni {
+    margin: 3rem 0 0 2rem;
+  }
+
+  h2.nadpis {
+    width: 90vw;
+    font-size: 2.125rem;
+  }
+
+  p.text {
+    width: 90vw;
+  }
+
+  .sm-hidden {
+    display: none;
+  }
+
+  .dva .container-mk3-sm-show img {
+    position: relative;
+    height: auto;
+    width: 90vw;
+  }
+
+  .dva .container-mk3-sm-show {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .realizace {
+    width: 50vw;
+    margin-bottom: 8vh;
+    padding: 5px;
+  }
+
+  .realizace:hover {
+    width: 55vw;
+    height: 14vh;
+  }
+
   .container-img img {
     height: 50vh;
   }
@@ -493,5 +549,16 @@ p.text {
 
   .footer-item {
     margin: 2vh 0;
+  }
+}
+
+@media screen and (width <= 375px) {
+  .container-img img {
+    height: auto;
+    width: 100vw;
+  }
+
+  .ctyri h1 {
+    font-size: 2.176rem;
   }
 }
