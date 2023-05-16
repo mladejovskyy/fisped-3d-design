@@ -158,6 +158,15 @@ p.text {
   transform: translateY(-10vh);
 }
 
+.container-img img:nth-of-type(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(calc(65% + 10vh)) scaleY(-1);
+  opacity: 0.35;
+  z-index: -100;
+}
+
 .tri .container-arrow {
   position: relative; /* Add relative positioning to container-arrow */
   margin-left: -14vw; /* Adjust margin to overlap with container-img */
@@ -222,6 +231,8 @@ p.text {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  z-index: 2;
 }
 
 .video {
@@ -325,6 +336,10 @@ p.text {
     width: 35vw;
   }
 
+  .realizace.active .arrowRight {
+    width: 8vw;
+  }
+
   .tri {
     height: 80vh;
   }
@@ -333,6 +348,10 @@ p.text {
     height: 65vh;
     margin-left: -3vw;
     transform: translateY(-15vh);
+  }
+
+  .container-img img:nth-of-type(2) {
+    transform: translateY(calc(55% + 10vh)) scaleY(-1);
   }
 
   .tri .container-text {
@@ -351,6 +370,14 @@ p.text {
 
   h2.nadpis {
     width: 50vw;
+  }
+
+  .realizace.active .arrowRight {
+    width: 10vw;
+  }
+
+  .realizace .arrowRight {
+    width: 7vw;
   }
 
   p.text {
@@ -374,6 +401,10 @@ p.text {
   .container-img img {
     transform: translateY(-10vh);
     margin-left: 0;
+  }
+
+  .container-img img:nth-of-type(2) {
+    display: none;
   }
 
   .tri {
@@ -420,6 +451,14 @@ p.text {
   p.text {
     font-size: 1.176rem;
     width: 50vw;
+  }
+
+  .realizace.active .arrowRight {
+    width: 12vw;
+  }
+
+  .realizace .arrowRight {
+    width: 9vw;
   }
 
   .realizace {
@@ -473,6 +512,18 @@ p.text {
     font-size: 2.125rem;
   }
 
+  .realizace.active .arrowRight {
+    width: 23vw;
+  }
+
+  .realizace .arrowRight {
+    width: 17vw;
+  }
+
+  .realizace .text-down {
+    margin-top: 5px;
+  }
+
   p.text {
     width: 90vw;
   }
@@ -517,6 +568,7 @@ p.text {
 
   .tri .container-text {
     margin-top: -13vh;
+    padding-bottom: 7vh;
   }
 
   .text-item {
@@ -558,7 +610,31 @@ p.text {
     width: 100vw;
   }
 
+  .realizace.active .arrowRight {
+    width: 25vw;
+  }
+
+  .realizace .arrowRight {
+    width: 19vw;
+  }
+
   .ctyri h1 {
     font-size: 2.176rem;
+  }
+}
+
+@media screen and (width <= 320px) {
+  .realizace {
+    width: 60vw;
+    height: 11.8vh;
+  }
+
+  .realizace:hover {
+    width: 68vw;
+    height: 14vh;
+  }
+
+  .tri .container-text {
+    margin-top: -8vh;
   }
 }
