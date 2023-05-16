@@ -307,13 +307,8 @@ p.text {
 .pet-images img {
   width: 30vw;
   margin: 0 4vw;
-  cursor: pointer;
   background-color: #212121;
   transition: var(--transition);
-}
-
-.pet-images img:hover {
-  opacity: 0.9;
 }
 
 .pet-asset img {
