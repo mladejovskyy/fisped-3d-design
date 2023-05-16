@@ -215,13 +215,19 @@ p.text {
 
 /* Animace */
 
-.text-item {
+.text-item,
+.animace-nadpis,
+.animace-text,
+.animace-realizace {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.text-item.show {
+.text-item.show,
+.animace-nadpis.show,
+.animace-text.show,
+.animace-realizace.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -268,7 +274,7 @@ p.text {
 .ctyri-asset img {
   position: absolute;
   width: 20vw;
-  bottom: 33vh;
+  bottom: 30vh;
   right: 1vw;
   z-index: -1; /* Set a negative z-index to place it behind the video */
 }

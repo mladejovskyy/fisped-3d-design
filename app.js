@@ -19,24 +19,47 @@ function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  return (
-    rect.top >= 0 &&
-    rect.bottom <= windowHeight
-  );
+  return rect.top >= 0 && rect.bottom <= windowHeight;
 }
 
 function animateTextItems() {
   var textItems = document.querySelectorAll('.text-item');
+  var animaceNadpis = document.querySelectorAll('.animace-nadpis');
+  var animaceText = document.querySelectorAll('.animace-text');
+  var animaceRealizace = document.querySelectorAll('.animace-realizace');
 
-  textItems.forEach(function(item) {
+  textItems.forEach(function (item) {
+    if (isElementInViewport(item)) {
+      item.classList.add('show');
+    }
+  });
+
+  animaceNadpis.forEach(function (item) {
+    if (isElementInViewport(item)) {
+      item.classList.add('show');
+    }
+  });
+
+  animaceText.forEach(function (item) {
+    if (isElementInViewport(item)) {
+      item.classList.add('show');
+    }
+  });
+
+  animaceRealizace.forEach(function (item) {
     if (isElementInViewport(item)) {
       item.classList.add('show');
     }
   });
 }
 
+// Trigger the animation on page load
+window.addEventListener('DOMContentLoaded', animateTextItems);
+
+// Trigger the animation on scroll and resize
 window.addEventListener('scroll', animateTextItems);
 window.addEventListener('resize', animateTextItems);
+
 
 // Run the animation on page load
 animateTextItems();
