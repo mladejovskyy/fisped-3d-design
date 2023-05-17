@@ -26,7 +26,7 @@ function animateTextItems() {
   var textItems = document.querySelectorAll('.text-item');
   var animaceNadpis = document.querySelectorAll('.animace-nadpis');
   var animaceText = document.querySelectorAll('.animace-text');
-  var animaceRealizace = document.querySelector('.animace-realizace');
+  var animaceRealizace = document.querySelectorAll('.animace-realizace');
 
   textItems.forEach(function (item) {
     if (isElementInViewport(item)) {
